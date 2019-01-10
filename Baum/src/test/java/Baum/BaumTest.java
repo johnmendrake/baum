@@ -63,4 +63,18 @@ public class BaumTest {
         assert !baum.contains(80);
         assert baum.contains(1);
     }
+
+    @Test
+    public void finalTest(){
+        Baum b = new Baum();
+        b.add(6);
+        b.add(5);
+        b.add(20);
+        b.add(9);
+        b.add(3);
+        b.add(1);
+
+        assert ! b.contains(40);
+        assertEquals(b.wurzel.groesser.kleiner, b.find(9));
+    }
 }
